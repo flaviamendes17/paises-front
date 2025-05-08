@@ -41,7 +41,15 @@ export default function Countries() {
   const resetFilter = () => fetchCountries();
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{
+        backgroundImage: "url('/images/terra.jfif')", 
+        backgroundSize: "cover", 
+        backgroundPosition: "center", 
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <h1>Lista de Países do Mundo</h1>
       <div>
         {regions.map((region) => (
@@ -57,7 +65,7 @@ export default function Countries() {
           Mostrar Todos
         </button>
       </div>
-
+  
       <div className={styles.cardContainer}>
         {isLoading ? (
           <Loading />
@@ -71,7 +79,7 @@ export default function Countries() {
           ))
         )}
       </div>
-
+  
       {selectedCountry && (
         <CountryModal
           country={selectedCountry}
@@ -79,5 +87,5 @@ export default function Countries() {
         />
       )}
     </div>
-  );
-}
+    );
+  }

@@ -4,7 +4,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: lightblue;
+    background-image: url('/images/terra.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .button {
@@ -40,3 +43,8 @@
     border-radius: 8px;
 }
 
+.h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
